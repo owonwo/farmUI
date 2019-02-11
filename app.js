@@ -79,7 +79,17 @@ window.addEventListener('load', () =>{
         purchaseLyt.style.display = 'none';  
     }
 
-   
     
             
 })
+
+let email = document.querySelector('#email');
+let password = document.querySelector('#password');
+let btn = document.querySelector('button.btn-submit');
+
+     btn.addEventListener('click', ()=>{
+         location.href = 'index.html';
+         if(email.value === 'DEMO' && password.value === '12345'){}
+
+     })
+ 

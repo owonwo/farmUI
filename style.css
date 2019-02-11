@@ -70,7 +70,7 @@ body{
 .pos-abs-h{
     position: absolute;
     left: 25%;
-    width: 1024px;
+    /* width: 1024px; */
     top: 220px;
 }
 
@@ -78,13 +78,14 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow-x: hidden;
 }
 
 .card-margin{
     margin: 10px 0;
 }
 .cards{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: space-between;
 }
@@ -98,6 +99,7 @@ body{
     align-items: center;
     display: flex;
     justify-content: space-between;
+    margin: 0 5px;
 }
 
 .cards .card>p{
@@ -112,6 +114,7 @@ body{
     border-radius: 50%;
     text-align: center;
     font-size: 61px;
+    
     padding: 25px 0;
     color: var(--color-dark-green);
 }
@@ -245,7 +248,7 @@ table#purchase{
 
 .invoice-lyt{
     min-height: 400px;
-    max-width: 900px;
+    width: 900px;
     background: #fff;
     padding: 25px;
 }
@@ -259,13 +262,9 @@ table#purchase{
     display: flex;
     justify-content: space-between;
     padding:  0 25px;
+    width: 75%;
 }
 
-.flex-col{
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-}
 
 .person-acct{
     /* background: purple; */
