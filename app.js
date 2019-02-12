@@ -88,7 +88,7 @@ let password = document.querySelector('#password');
 let btn = document.querySelector('button.btn-submit');
 
      btn.addEventListener('click', ()=>{
-         location.href = 'dash.html';
+         location.href = 'dashboard.html';
          if(email.value === 'DEMO' && password.value === '12345'){}
 
      })
