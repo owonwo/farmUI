@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,108 +8,115 @@
     <title>Farm UI | Dashboard page</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main class="main">
         <header class="header"></header>
         <div class="is-section">
-            <ul>
-                <li class="dashboard">Dashboard</li>
-                <li class="purchase">Purchase history</li>
-                <li class="invoice">invoices</li>
-                <li class="account">account</li>
+            <ul class="main-sidebar">
+                <li class="dashboard">
+                    <a href="#dash-lyt">Dashboard</a>
+                </li>
+                <li class="purchase">
+                    <a href="#purchase-lyt">Purchase history</a></li>
+                <li class="invoice">
+                    <a href="#invoice-lyt">invoices</a>
+                </li>
+                <li class="account">
+                    <a href="#account-lyt">account</a>
+                </li>
             </ul>
 
-        </div>
+            <section class="main-container">
+                <div id="dash-lyt">
+                    <div class="cards card-margin">
+                        <div class="card card-1">
+                            <p>Products <br /> Purchased</p>
+                            <div class="round">18</div>
+                        </div>
+                        <div class="card card-2">
+                            <p>Delivered <br /> Products</p>
+                            <div class="round">3</div>
 
-        <div class="pos-abs-h dash-lyt">
-            <div class="cards card-margin">
-                <div class="card card-1">
-                    <p>Products <br/> Purchased</p>
-                    <div class="round">18</div>
+                        </div>
+                        <div class="card card-3">
+                            <p>Pending <br /> Products</p>
+                            <div class="round">3</div>
+                        </div>
+                    </div>
+                    <div class="farm-map card-margin">
+                        <div>
+                            <h4 class="card-caption">MAIN FARM ADDRESS</h4>
+                            <br>
+                            <p>
+                                20 Jane Haret Close, <br />
+                                Lekki by Epe Expy,<br />
+                                Lagos.
+                            </p>
+
+                            <button class="btn btn-pos btn-w btn-c">Edit Address</button>
+                        </div>
+
+                        <div class="map-image">
+                            <button class="btn btn-map">MAP</button>
+                        </div>
+                    </div>
+                    <div class="order-history card-margin">
+                        <h4 class="card-caption">RECENT ORDER HISTORY</h4>
+
+                        <table>
+                            <tr>
+                                <th>S/N</th>
+                                <th>PRODUCT</th>
+                                <th>QUANTITY</th>
+                                <th>AMOUNT</th>
+                                <th>STATUS</th>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>Cashew Nuts</td>
+                                <td>300 bags</td>
+                                <td>100,000</td>
+                                <td>Pending</td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>Cashew Nuts</td>
+                                <td>300 bags</td>
+                                <td>100,000</td>
+                                <td>Pending</td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>Cashew Nuts</td>
+                                <td>300 bags</td>
+                                <td>100,000</td>
+                                <td>Pending</td>
+                            </tr>
+
+                            <tr>
+                                <td>1</td>
+                                <td>Cashew Nuts</td>
+                                <td>300 bags</td>
+                                <td>100,000</td>
+                                <td>Pending</td>
+                            </tr>
+
+
+                        </table>
+
+
+                    </div>
+
                 </div>
-                <div class="card card-2">
-                    <p>Delivered <br/> Products</p>
-                    <div class="round">3</div>
 
-                </div>
-                <div class="card card-3">
-                    <p>Pending <br/> Products</p>
-                    <div class="round">3</div>
-                </div>
-            </div>
-            <div class="farm-map card-margin">
-               <div> 
-                    <h4>MAIN FARM ADDRESS</h4>
-                    <br>
-                    <p>
-                        20 Jane Haret Close,  <br/>
-                        Lekki by Epe Expy,<br/>
-                        Lagos.
-                    </p>
-                    
-                    <button class="btn btn-pos btn-w btn-c">Edit Address</button>
-               </div>
-               
-               <div class="map-image">
-                   <button class="btn btn-map">MAP</button>
-               </div>
-            </div>
-            <div class="order-history card-margin">
-                <h4>RECENT ORDER HISTORY</h4>
+                <div id="purchase-lyt">
+                    <div class="card more-padding">
+                        <h4 class="page-heading">Purchase History</h4>
 
-                <table>
-                    <tr>
-                        <th>S/N</th>
-                        <th>PRODUCT</th>
-                        <th>QUANTITY</th>
-                        <th>AMOUNT</th>
-                        <th>STATUS</th>
-                    </tr>
-
-                    <tr>
-                        <td>1</td>
-                        <td>Cashew Nuts</td>
-                        <td>300 bags</td>
-                        <td>100,000</td>
-                        <td>Pending</td>
-                    </tr>
-
-                    <tr>
-                        <td>1</td>
-                        <td>Cashew Nuts</td>
-                        <td>300 bags</td>
-                        <td>100,000</td>
-                        <td>Pending</td>
-                    </tr>
-
-                    <tr>
-                        <td>1</td>
-                        <td>Cashew Nuts</td>
-                        <td>300 bags</td>
-                        <td>100,000</td>
-                        <td>Pending</td>
-                    </tr>
-
-                    <tr>
-                        <td>1</td>
-                        <td>Cashew Nuts</td>
-                        <td>300 bags</td>
-                        <td>100,000</td>
-                        <td>Pending</td>
-                    </tr>
-    
-
-                </table>
-
-               
-            </div>
-
-        </div>
-
-        <div class="pos-abs-h purchase-lyt">
-                <div class="purchase-history">
-                        <h4>Purchase History</h4>
-        
                         <table id="purchase">
                             <tr>
                                 <th>S/N</th>
@@ -117,7 +125,7 @@
                                 <th>AMOUNT</th>
                                 <th>STATUS</th>
                             </tr>
-        
+
                             <tr>
                                 <td>1</td>
                                 <td>Cashew Nuts</td>
@@ -125,7 +133,7 @@
                                 <td>100,000</td>
                                 <td>Pending</td>
                             </tr>
-        
+
                             <tr>
                                 <td>1</td>
                                 <td>Cashew Nuts</td>
@@ -133,7 +141,7 @@
                                 <td>100,000</td>
                                 <td>Pending</td>
                             </tr>
-        
+
                             <tr>
                                 <td>1</td>
                                 <td>Cashew Nuts</td>
@@ -141,7 +149,7 @@
                                 <td>100,000</td>
                                 <td>Pending</td>
                             </tr>
-        
+
                             <tr>
                                 <td>1</td>
                                 <td>Cashew Nuts</td>
@@ -149,7 +157,7 @@
                                 <td>100,000</td>
                                 <td>Pending</td>
                             </tr>
-            
+
                             <tr>
                                 <td>1</td>
                                 <td>Cashew Nuts</td>
@@ -157,153 +165,164 @@
                                 <td>100,000</td>
                                 <td>Pending</td>
                             </tr>
-    
+
                         </table>
 
                     </div>
+                </div>
+
+                <div id="invoice-lyt">
+                    <div class="card more-padding">
+                        <h4 class="page-heading">Billings</h4>
+                    </div>
+                </div>
+
+                <div id="account-lyt">
+                    <section class="account-lyt">
+                        <div class="person-acct">
+                            <div class="card">
+                                <h4 class="card-caption">ACCOUNT</h4>
+                                <div class="card-body">
+                                    <section class="acct-box">
+                                        <article>
+                                            <h1 class="username">John Chukwuemeka</h1>
+                                            <p>Male</p>
+                                        </article>
+                                        <img class="round-a">
+                                    </section>
+                                </div>
+
+                            </div>
+
+                            <div class="card card-w card-s">
+                                <h4 class="card-caption">EDIT PROFILE</h4>
+
+                                <form action="" class="form-w">
+                                    <label for="firstname">First Name</label>
+                                    <input type="text">
+                                    <label for="firstname">Last Name</label>
+                                    <input type="text">
+                                    <label for="firstname">Gender</label>
+                                    <input type="text">
+                                    <label for="firstname">Business Name</label>
+                                    <input type="text">
+
+                                </form>
+
+                                <button class="btn btn-save btn-c">Save</button>
+
+                            </div>
+
+                            <div class="card card-w card-s">
+                                <h4 class="card-caption">CHANGE PASSWORD</h4>
+
+                                <form action="" class="form-w">
+                                    <label for="old password">Old Password</label>
+                                    <input type="password">
+                                    <label for="new password">New Password</label>
+                                    <input type="password">
+                                    <label for="confirm password">Confirm Password</label>
+                                    <input type="password">
+
+                                </form>
+
+                                <button class="btn btn-save btn-c">Save</button>
+
+
+                            </div>
+                        </div>
+
+                        <div class="map-locate card card-m">
+                            <h4 class="card-caption">FARMS</h4>
+                            <div class="card-body">
+                                <div class="card-map">
+                                    <div class="card-mapFlex">
+                                        <div class="card-mapImg"></div>
+                                        <p>20 Jane Haret Close, <br>
+                                            Lekki by Epe Expy, <br>
+                                            Lagos.
+                                        </p>
+                                    </div>
+
+                                    <div class="align">
+                                        <button class="btn btn-c btn-edit">Edit</button>
+                                        <button class="btn btn-c btn-del">Delete</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="card-map">
+                                    <div class="card-mapFlex">
+                                        <div class="card-mapImg"></div>
+                                        <p>20 Jane Haret Close, <br>
+                                            Lekki by Epe Expy, <br>
+                                            Lagos.
+                                        </p>
+                                    </div>
+
+                                    <div class="align">
+                                        <button class="btn btn-c btn-edit">Edit</button>
+                                        <button class="btn btn-c btn-del">Delete</button>
+                                    </div>
+
+                                </div>
+
+                                <div class="card-map">
+                                    <div class="card-mapFlex">
+                                        <div class="card-mapImg"></div>
+                                        <p>20 Jane Haret Close, <br>
+                                            Lekki by Epe Expy, <br>
+                                            Lagos.
+                                        </p>
+                                    </div>
+
+                                    <div class="align">
+                                        <button class="btn btn-c btn-edit">Edit</button>
+                                        <button class="btn btn-c btn-del">Delete</button>
+                                    </div>
+
+                                </div>
+                                <div class="card-map">
+                                    <div class="card-mapFlex">
+                                        <div class="card-mapImg"></div>
+                                        <p>20 Jane Haret Close, <br>
+                                            Lekki by Epe Expy, <br>
+                                            Lagos.
+                                        </p>
+                                    </div>
+
+                                    <div class="align">
+                                        <button class="btn btn-c btn-edit">Edit</button>
+                                        <button class="btn btn-c btn-del">Delete</button>
+                                    </div>
+
+                                </div>
+                                <div class="card-map">
+                                    <div class="card-mapFlex">
+                                        <div class="card-mapImg"></div>
+                                        <p>20 Jane Haret Close, <br>
+                                            Lekki by Epe Expy, <br>
+                                            Lagos.
+                                        </p>
+                                    </div>
+
+                                    <div class="align">
+                                        <button class="btn btn-c btn-edit">Edit</button>
+                                        <button class="btn btn-c btn-del">Delete</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
         </div>
 
-        <div class="pos-abs-h invoice-lyt">
-            <h4>Billings</h4>
-        </div>
 
 
-        <div class="pos-abs-h account-lyt">
-            <div class="person-acct">
-                <div class="card-a card-w">
-                    <div class="acct-box">
-                        <h4>ACCOUNT</h4>
-                        <p>John Chukwuemeka</p>        
-                    </div>
-
-                    <div class="round-a"></div>
-
-                </div>
-
-                <div class="card-p card-w card-s">
-                    <h4>EDIT PROFILE</h4>
-
-                    <form action="" class="form-w">
-                        <label for="firstname">First Name</label> 
-                        <input type="text"> 
-                        <label for="firstname">Last Name</label>
-                        <input type="text"> 
-                        <label for="firstname">Gender</label> 
-                        <input type="text"> 
-                        <label for="firstname">Business Name</label> 
-                        <input type="text"> 
-
-                    </form>
-
-                    <button class="btn btn-save btn-c">Save</button>
-
-                </div>
-
-                <div class="card-p card-w card-s">
-                    <h4>CHANGE PASSWORD</h4>
-
-                    <form action="" class="form-w">
-                            <label for="old password">Old Password</label> 
-                            <input type="password"> 
-                            <label for="new password">New Password</label>
-                            <input type="password"> 
-                            <label for="confirm password">Confirm Password</label> 
-                            <input type="password">                         
-    
-                    </form>
-    
-                    <button class="btn btn-save btn-c">Save</button>
-    
-    
-                </div>
-            </div>
-            <div class="map-locate">
-                <div class="card-m">
-                    <h4>FARMS</h4>
-
-                    <div class="card-map">
-                        <div class="card-mapFlex">
-                            <div class="card-mapImg"></div>
-                            <p>20 Jane Haret Close, <br>
-                                Lekki by Epe Expy, <br>
-                                Lagos.
-                            </p>
-                        </div>  
-                        
-                        <div class="align">
-                            <button class="btn btn-c btn-edit">Edit</button>
-                            <button class="btn btn-c btn-del">Delete</button>    
-                        </div>
-
-                    </div>
-
-                    <div class="card-map">
-                        <div class="card-mapFlex">
-                            <div class="card-mapImg"></div>
-                            <p>20 Jane Haret Close, <br>
-                                Lekki by Epe Expy, <br>
-                                Lagos.
-                            </p>
-                        </div>  
-                        
-                        <div class="align">
-                            <button class="btn btn-c btn-edit">Edit</button>
-                            <button class="btn btn-c btn-del">Delete</button>    
-                        </div>
-
-                    </div>
-
-                    <div class="card-map">
-                        <div class="card-mapFlex">
-                            <div class="card-mapImg"></div>
-                            <p>20 Jane Haret Close, <br>
-                                Lekki by Epe Expy, <br>
-                                Lagos.
-                            </p>
-                        </div>  
-                        
-                        <div class="align">
-                            <button class="btn btn-c btn-edit">Edit</button>
-                            <button class="btn btn-c btn-del">Delete</button>    
-                        </div>
-
-                    </div>
-                    <div class="card-map">
-                        <div class="card-mapFlex">
-                            <div class="card-mapImg"></div>
-                            <p>20 Jane Haret Close, <br>
-                                Lekki by Epe Expy, <br>
-                                Lagos.
-                            </p>
-                        </div>  
-                        
-                        <div class="align">
-                            <button class="btn btn-c btn-edit">Edit</button>
-                            <button class="btn btn-c btn-del">Delete</button>    
-                        </div>
-
-                    </div>
-                    <div class="card-map">
-                        <div class="card-mapFlex">
-                            <div class="card-mapImg"></div>
-                            <p>20 Jane Haret Close, <br>
-                                Lekki by Epe Expy, <br>
-                                Lagos.
-                            </p>
-                        </div>  
-                        
-                        <div class="align">
-                            <button class="btn btn-c btn-edit">Edit</button>
-                            <button class="btn btn-c btn-del">Delete</button>    
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </div>
     </main>
 
     <script src="app.js"></script>
 </body>
+
 </html>
