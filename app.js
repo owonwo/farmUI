@@ -1,95 +1,59 @@
+
 window.addEventListener('load', () =>{
-    // alert('CONNECTED!');
 
-//TRIED TO DO SOMETHING WITH JAVASCRIPT :) I KNOW. IT'S ALL DRY...
-//FOR LAYOUTS
-    var dashLyt, purchaseLyt, invoiceLyt, accountLyt
-    dashLyt = document.querySelector('.dash-lyt');
-    purchaseLyt = document.querySelector('.purchase-lyt');
-    invoiceLyt = document.querySelector('.invoice-lyt');
-    accountLyt = document.querySelector('.account-lyt');
+    const anchors = document.querySelectorAll('li a');
+    const pages = []
 
-    dashLyt.style.display = 'none';
-    purchaseLyt.style.display = 'none';
-    invoiceLyt.style.display = 'none';
-    accountLyt.style.display = 'none';
+    Array.from(anchors).map(function(el, index) {
+        const page_selector = el.getAttribute('href');
+        const pageElement = document.querySelector(page_selector);
 
+        pages.push(pageElement);
+        pageElement.style.display = "none";
 
-    //FOR EVENT LISTENERS
-    var dashboard, purchase, invoice, account
+        el.addEventListener('click', function(event) {
+            event.preventDefault();
 
-    dashboard = document.querySelector('.dashboard');
-    purchase = document.querySelector('.purchase');
-    invoice = document.querySelector('.invoice');
-    account = document.querySelector('.account');
+            const parentElement = event.target.parentElement;
 
-
-    if(dashboard){
-        dashboard.addEventListener('click', () => {
-            dashLyt.style.display = 'flex';
-            forDashboard();
+            if (pageElement) { //checks if the element exist
+                parentElement.classList.add("active");
+                removeOtherActive(anchors, el);
+                changePage(pages, pageElement);
+            }
         })
+    });
+
+    anchors[0].click(); //making javascript click the first link programatically
+});
+
+function changePage(pages, page) {
+    for (const selector of pages) {
+        if (selector === page) {
+            selector.style.display = "block"
+        } else {
+            selector.style.display = "none"
+        }
     }
+}
 
-    if(purchase){
-        purchase.addEventListener('click', () => {
-            purchaseLyt.style.display = 'block';
-            forPurchase();
-        })
+function removeOtherActive(anchors, anchor) {
+    for (const el of anchors) {
+        if (el.parentElement !== anchor.parentElement) {
+            el.parentElement.classList.remove('active');
+        }
     }
-
-    if(invoice){
-        invoice.addEventListener('click', () => {
-            invoiceLyt.style.display = 'block';
-            forInvoice();
-        })
-    }
-
-    if(account){
-        account.addEventListener('click', () => {
-            accountLyt.style.display = 'flex';
-            forAccount();
-        })
-    }
-
-
-    //THE DRY CODE BEGINS
-    function forDashboard(){
-        purchaseLyt.style.display = 'none';
-        invoiceLyt.style.display = 'none';
-        accountLyt.style.display = 'none';  
-
-    }
-
-    function forPurchase(){
-        dashLyt.style.display = 'none';
-        invoiceLyt.style.display = 'none';
-        accountLyt.style.display = 'none';  
-    }
-
-    function forInvoice(){
-        dashLyt.style.display = 'none';
-        purchaseLyt.style.display = 'none';
-        accountLyt.style.display = 'none';  
-    }
-
-    function forAccount(){
-        dashLyt.style.display = 'none';
-        invoiceLyt.style.display = 'none';
-        purchaseLyt.style.display = 'none';  
-    }
-
-    
-            
-})
+}
 
 let email = document.querySelector('#email');
 let password = document.querySelector('#password');
 let btn = document.querySelector('button.btn-submit');
 
-     btn.addEventListener('click', ()=>{
-         location.href = 'dashboard.html';
-         if(email.value === 'DEMO' && password.value === '12345'){}
+if (btn){
+    btn.addEventListener('click', ()=>{
+        location.href = 'dashboard.html';
+        if(email.value === 'DEMO' && password.value === '12345'){}
+    })
+}
 
-     })
  
